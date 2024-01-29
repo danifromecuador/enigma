@@ -1,1 +1,17 @@
-hello dani
+<h1>Enigma Machine</h1>
+
+<h2>Message List</h2>
+
+<ul>
+  <% @messages.each do |message| %>
+    <li>
+      <span>
+        <%= message.english_message %> 
+      </span>
+      <span>
+        <%= message.morse_code %>
+      </span>
+    </li>  
+  <% end %>
+</ul>
+
