@@ -16,6 +16,4 @@ class MessagesController < ApplicationController
       render action: 'new', alert: 'Message was not created.', status: :unprocessable_entity
     end
   end
-
-  
 end
