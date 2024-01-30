@@ -1,0 +1,7 @@
+<nav>
+  <h1>Enigma Machine</h1>
+  <div class="left">
+    <h2><%= link_to "All" , root_path, class: ('active' if current_page?(root_path)) %></h2>
+    <h2><%= link_to "New" , new_message_path, class: ('active' if current_page?(new_message_path)) %></h2>
+  </div>
+</nav>

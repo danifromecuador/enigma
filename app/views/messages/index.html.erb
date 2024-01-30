@@ -1,0 +1,13 @@
+<ul class="messages_list">
+  <% @messages.each do |message| %>
+    <li class="message">
+      <span>
+        <%= message.english_message %> 
+      </span>
+      <span>
+        <%= message.morse_code %>
+      </span>
+    </li>  
+  <% end %>
+</ul>
+
