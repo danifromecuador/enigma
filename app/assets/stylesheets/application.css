@@ -54,11 +54,14 @@ nav {
   width: 70%;
 }
 
+.active {
+  color: red;
+}
+
 /* index */
 .messages_list {
   width: 60%;
   margin: 0 auto;
-  background-color: red;
 }
 
 .message {
