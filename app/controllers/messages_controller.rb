@@ -13,7 +13,7 @@ class MessagesController < ApplicationController
     if @message.save
       redirect_to messages_path, notice: 'Message was successfully created.'
     else
-      render action: 'new', alert: 'Message was not created.', status: :unprocessable_entity
+      render :new, alert: 'Message was not created.', status: :unprocessable_entity
     end
   end
 
