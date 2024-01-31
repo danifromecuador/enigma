@@ -1,5 +1,13 @@
 <%= form_for @message do |f| %>
   <%= f.text_field :english_message, placeholder: "Enter your message" %>
+  <% @message.errors.full_messages_for(:english_message).each do |message| %>
+    <div><%= message %></div>
+  <% end %>
+
   <%= f.text_field :morse_code, placeholder: "Enter your message" %>
+  <% @message.errors.full_messages_for(:morse_code).each do |message| %>
+    <div><%= message %></div>
+  <% end %>
+
   <%= f.submit %>
 <% end %>
