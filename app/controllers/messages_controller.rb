@@ -8,12 +8,18 @@ class MessagesController < ApplicationController
   end
 
   def create
-    @message = Message.new(params[:message])
+    @message = Message.new(message_params)
 
     if @message.save
       redirect_to messages_path, notice: 'Message was successfully created.'
     else
-      render action: 'new', alert: 'Message was not created.', status: :unprocessable_entity
+      render :new, alert: 'Message was not created.', status: :unprocessable_entity
     end
+  end
+
+  private
+
+  def message_params
+    params.require(:message).permit(:english_message, :morse_code)
   end
 end
