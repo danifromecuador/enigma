@@ -60,6 +60,11 @@ nav {
 }
 
 /* index */
+p {
+  margin-top: 20px;
+  text-align: center;
+}
+
 .messages_list {
   width: 60%;
   margin: 0 auto;
